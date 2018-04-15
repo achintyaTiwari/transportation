@@ -1,0 +1,51 @@
+{
+  "port": 3000,
+  "database": {
+    "host": "localhost",
+    "port": 27017,
+    "username": "",
+    "password": "",
+    "name": "",
+    "uri": null
+  },
+  "firebase_service_account": {
+    "credential": {
+      "project_id": "",
+      "private_key": "",
+      "client_email": ""
+    },
+    "databaseURL": "https://<PROJECT_ID>.firebaseio.com"
+  },
+  "sentry": {
+    "dsn": ""
+  },
+  "session": {
+    "secret": ""
+  },
+  "razorpay": {
+    "base_url": "",
+    "key_id": "",
+    "key_secret": ""
+  },
+  "aws": {
+    "access_key_id": "",
+    "secret_access_key": "",
+    "s3": {
+      "region": "",
+      "bucket": ""
+    },
+    "ses": {
+      "region": "",
+      "domain": ""
+    }
+  },
+  "api_doc": {
+    "username": "",
+    "password": ""
+  },
+  "plivo": {
+    "auth_id": "",
+    "auth_token": "",
+    "from_number": ""
+  }
+}

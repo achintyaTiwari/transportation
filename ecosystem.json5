@@ -1,0 +1,47 @@
+{
+  apps : [
+    {
+      name: "Horse",
+      script: "app/server.js",
+      env: {},
+      env_development: {
+        NODE_ENV: "development"
+      },
+      env_staging: {
+        NODE_ENV: "staging"
+      },
+      env_production: {
+        NODE_ENV: "production"
+      }
+    }
+  ],
+  deploy : {
+    development : {
+      user : "ubuntu",
+      host : [""],
+      ref  : "origin/develop",
+      repo : "bitbucket:urbancommute/horse.git",
+      path : "/home/ubuntu/projects/urbancommute/horse/development",
+      "pre-setup": "./setup.sh development",
+      "post-deploy" : "./build.sh development"
+    },
+    staging : {
+      user : "ubuntu",
+      host : ["54.251.183.191"],
+      ref  : "origin/staging",
+      repo : "bitbucket:urbancommute/horse.git",
+      path : "/home/ubuntu/projects/urbancommute/horse/staging",
+      "pre-setup": "./setup.sh staging",
+      "post-deploy" : "./build.sh staging"
+    },
+    production : {
+      user : "ubuntu",
+      host : ["13.126.246.1"],
+      ref  : "origin/master",
+      repo : "bitbucket:urbancommute/horse.git",
+      path : "/home/ubuntu/projects/urbancommute/horse/production",
+      "pre-setup": "./setup.sh production",
+      "post-deploy" : "./build.sh production"
+    }
+  }
+}
